@@ -1,6 +1,6 @@
 # Carrinho De Compras
 
-comandos para criar o banco de dados 
+Comandos para criar o banco de dados 
 
 No Package Manager Console.
 
