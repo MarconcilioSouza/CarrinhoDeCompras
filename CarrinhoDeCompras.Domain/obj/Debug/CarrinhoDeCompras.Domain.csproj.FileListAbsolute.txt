@@ -1,0 +1,5 @@
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Domain\bin\Debug\CarrinhoDeCompras.Domain.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Domain\bin\Debug\CarrinhoDeCompras.Domain.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Domain\obj\Debug\CarrinhoDeCompras.Domain.csproj.CoreCompileInputs.cache
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Domain\obj\Debug\CarrinhoDeCompras.Domain.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Domain\obj\Debug\CarrinhoDeCompras.Domain.pdb

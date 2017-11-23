@@ -1,0 +1,15 @@
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.dll.config
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\CarrinhoDeCompras.Domain.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\EntityFramework.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\CarrinhoDeCompras.Domain.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\EntityFramework.xml
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\obj\Debug\CarrinhoDeCompras.Infra.Data.EF.csprojResolveAssemblyReference.cache
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\obj\Debug\CarrinhoDeCompras.Infra.Data.EF.csproj.CoreCompileInputs.cache
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\obj\Debug\CarrinhoDeCompras.Infra.Data.EF.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\obj\Debug\CarrinhoDeCompras.Infra.Data.EF.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\obj\Debug\CarrinhoDeCompras.Infra.Data.EF.Migrations.CarrinhoDeCompras_V1.resources
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Infra.Data.EF\obj\Debug\CarrinhoDeCompras.Infra.Data.EF.csproj.GenerateResource.Cache
