@@ -41,7 +41,7 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Repositorios
         }
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return db.Set<TEntity>().AsNoTracking().Where(predicate);
         }
         public void Dispose()
         {

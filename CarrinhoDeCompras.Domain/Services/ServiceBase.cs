@@ -2,6 +2,7 @@
 using CarrinhoDeCompras.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace CarrinhoDeCompras.Domain.Services
 {
@@ -22,6 +23,11 @@ namespace CarrinhoDeCompras.Domain.Services
         public void Dispose()
         {
             _repositorio.Dispose();
+        }
+
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _repositorio.Find(predicate);
         }
 
         public IEnumerable<TEntity> GetAll()

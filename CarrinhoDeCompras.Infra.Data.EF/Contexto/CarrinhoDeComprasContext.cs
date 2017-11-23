@@ -11,7 +11,7 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Contexto
         public CarrinhoDeComprasContext()
             : base("DataContext")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Employees> Employees { get; set; }

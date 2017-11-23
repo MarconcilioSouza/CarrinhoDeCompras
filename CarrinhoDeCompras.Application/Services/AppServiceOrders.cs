@@ -1,6 +1,8 @@
 ﻿using CarrinhoDeCompras.Application.Interfaces;
 using CarrinhoDeCompras.Domain.Entidades;
 using CarrinhoDeCompras.Domain.Interfaces.Services;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CarrinhoDeCompras.Application.Services
 {
@@ -11,6 +13,11 @@ namespace CarrinhoDeCompras.Application.Services
             : base(repositorio)
         {
             _repositorio = repositorio;
+        }
+
+        public IEnumerable<Orders> GetOrdersByCustomerID(int customerID)
+        {
+            return Find(O => O.CustomerID == customerID).ToList();
         }
     }
 }
