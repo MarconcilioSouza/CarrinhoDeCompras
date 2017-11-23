@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrinhoDeCompras.UI", "Car
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrinhoDeCompras.UI.Tests", "CarrinhoDeCompras.UI.Tests\CarrinhoDeCompras.UI.Tests.csproj", "{3D0DFA36-A173-4203-9CE6-9619D12DF53C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrinhoDeCompras.Application.Test", "CarrinhoDeCompras.Application.Test\CarrinhoDeCompras.Application.Test.csproj", "{02C40075-95BA-450E-BBF7-037AA955D99A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{3D0DFA36-A173-4203-9CE6-9619D12DF53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0DFA36-A173-4203-9CE6-9619D12DF53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0DFA36-A173-4203-9CE6-9619D12DF53C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C40075-95BA-450E-BBF7-037AA955D99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C40075-95BA-450E-BBF7-037AA955D99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C40075-95BA-450E-BBF7-037AA955D99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C40075-95BA-450E-BBF7-037AA955D99A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{77CE91AE-EBF3-4409-BF4E-38F6FC84FA76} = {C7A89A0B-D7B9-479E-A122-77C190565BB4}
 		{058B6A54-F59E-4AC0-BFAA-6FB1F1881526} = {CFDE2689-9444-42E8-BB12-4FB8E4FF07D8}
 		{3D0DFA36-A173-4203-9CE6-9619D12DF53C} = {CFDE2689-9444-42E8-BB12-4FB8E4FF07D8}
+		{02C40075-95BA-450E-BBF7-037AA955D99A} = {0171F396-22DF-457E-AA94-CD29EC923218}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E78DA2E8-C238-477F-B35B-5DDA1A7DA39E}

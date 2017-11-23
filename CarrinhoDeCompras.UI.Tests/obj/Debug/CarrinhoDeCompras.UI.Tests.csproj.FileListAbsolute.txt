@@ -92,3 +92,10 @@ C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Deb
 C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\Ninject.dll
 C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\Ninject.Web.Common.xml
 C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\Ninject.xml
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\CarrinhoDeCompras.Infra.CrossCutting.IoC.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\EntityFramework.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\CarrinhoDeCompras.Infra.CrossCutting.IoC.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.dll.config
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.UI.Tests\bin\Debug\EntityFramework.xml
