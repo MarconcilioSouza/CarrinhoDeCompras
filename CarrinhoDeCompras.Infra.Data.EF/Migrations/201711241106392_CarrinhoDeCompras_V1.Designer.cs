@@ -13,7 +13,7 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201711231336201_CarrinhoDeCompras_V1"; }
+            get { return "201711241106392_CarrinhoDeCompras_V1"; }
         }
         
         string IMigrationMetadata.Source

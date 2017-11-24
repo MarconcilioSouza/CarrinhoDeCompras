@@ -41,6 +41,12 @@
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.1.18\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -51,6 +57,7 @@
       <HintPath>..\packages\Moq.4.7.145\lib\net45\Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -59,6 +66,7 @@
     <Compile Include="OrdersTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +77,14 @@
     <ProjectReference Include="..\CarrinhoDeCompras.Domain\CarrinhoDeCompras.Domain.csproj">
       <Project>{77ce91ae-ebf3-4409-bf4e-38f6fc84fa76}</Project>
       <Name>CarrinhoDeCompras.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarrinhoDeCompras.Infra.CrossCutting.IoC\CarrinhoDeCompras.Infra.CrossCutting.IoC.csproj">
+      <Project>{a98da5d9-2bfb-4b8f-80eb-fd419da77596}</Project>
+      <Name>CarrinhoDeCompras.Infra.CrossCutting.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarrinhoDeCompras.Infra.Data.EF\CarrinhoDeCompras.Infra.Data.EF.csproj">
+      <Project>{578fa38e-d151-409d-8a8e-b16c1547c8c3}</Project>
+      <Name>CarrinhoDeCompras.Infra.Data.EF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

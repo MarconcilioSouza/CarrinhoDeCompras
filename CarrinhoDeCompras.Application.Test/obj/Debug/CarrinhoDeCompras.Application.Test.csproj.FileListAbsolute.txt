@@ -22,3 +22,15 @@ C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test
 C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\obj\Debug\CarrinhoDeCompras.Application.Test.csproj.CoreCompileInputs.cache
 C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\obj\Debug\CarrinhoDeCompras.Application.Test.dll
 C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\obj\Debug\CarrinhoDeCompras.Application.Test.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\CarrinhoDeCompras.Infra.CrossCutting.IoC.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\Ninject.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\EntityFramework.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\CarrinhoDeCompras.Infra.CrossCutting.IoC.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.pdb
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\CarrinhoDeCompras.Infra.Data.EF.dll.config
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\Ninject.xml
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\EntityFramework.xml
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\CarrinhoDeCompras.Application.Test.dll.config
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\WORK\1-Arquivos Pessoais\CarrinhoDeCompras\CarrinhoDeCompras.Application.Test\bin\Debug\EntityFramework.SqlServer.xml

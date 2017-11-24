@@ -1,22 +1,17 @@
-﻿using System;
+﻿using CarrinhoDeCompras.Domain.Entidades;
+using CarrinhoDeCompras.Domain.Interfaces.Repositorios;
+using CarrinhoDeCompras.Infra.Data.EF.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CarrinhoDeCompras.Application.Interfaces;
-using CarrinhoDeCompras.Domain.Interfaces.Services;
-using CarrinhoDeCompras.Domain.Services;
-using CarrinhoDeCompras.Domain.Entidades;
-using Moq;
+using System;
 
 namespace CarrinhoDeCompras.Application.Test
 {
     [TestClass]
     public class OrdersTest
     {
-        private readonly IAppServiceOrders _AppServiceOrders;
-        private readonly IAppServiceCustomers _AppServiceCustomers;
-        private readonly IAppServiceProducts _AppServiceProducts;
-        private readonly int CustomerID = 85;
+        private  IRepositorioOrders _repositorio;
         [TestMethod]
-        public void InclirPedidos()
+        public void IncluirPedidos()
         {
             var order = new Orders()
             {
@@ -35,10 +30,16 @@ namespace CarrinhoDeCompras.Application.Test
                 ShipCountry = "France",
             };
 
-            var mockRepo = new Mock<IAppServiceOrders>();
-            mockRepo.Setup(x => x.Add(order));
 
-
+            try
+            {
+                _repositorio = new RepositorioOrders();
+                _repositorio.Add(order);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

@@ -74,42 +74,35 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Migrations
                         ShipRegion = c.String(maxLength: 15, unicode: false),
                         ShipPostalCode = c.String(maxLength: 10, unicode: false),
                         ShipCountry = c.String(maxLength: 15, unicode: false),
+                        Customers_ID = c.Int(),
+                        Shippers_ShipperID = c.Int(),
                     })
                 .PrimaryKey(t => t.OrderID)
-                .ForeignKey("dbo.Customers", t => t.CustomerID)
                 .ForeignKey("dbo.Employees", t => t.EmployeeID)
-                .ForeignKey("dbo.Shippers", t => t.ShipVia)
-                .Index(t => t.CustomerID)
+                .ForeignKey("dbo.Customers", t => t.Customers_ID)
+                .ForeignKey("dbo.Shippers", t => t.Shippers_ShipperID)
                 .Index(t => t.EmployeeID)
-                .Index(t => t.ShipVia);
+                .Index(t => t.Customers_ID)
+                .Index(t => t.Shippers_ShipperID);
             
             CreateTable(
-                "dbo.Customers",
+                "dbo.Suppliers",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
-                        CustomerID = c.String(nullable: false, maxLength: 5),
-                        CompanyName = c.String(nullable: false, maxLength: 40),
-                        ContactName = c.String(maxLength: 30),
-                        ContactTitle = c.String(maxLength: 30),
-                        Address = c.String(maxLength: 60),
-                        City = c.String(maxLength: 15),
-                        Region = c.String(maxLength: 15),
-                        PostalCode = c.String(maxLength: 10),
-                        Country = c.String(maxLength: 15),
-                        Phone = c.String(maxLength: 24),
-                        Fax = c.String(maxLength: 24),
+                        SupplierID = c.Int(nullable: false, identity: true),
+                        CompanyName = c.String(nullable: false, maxLength: 40, unicode: false),
+                        ContactName = c.String(maxLength: 30, unicode: false),
+                        ContactTitle = c.String(maxLength: 30, unicode: false),
+                        Address = c.String(maxLength: 60, unicode: false),
+                        City = c.String(maxLength: 15, unicode: false),
+                        Region = c.String(maxLength: 15, unicode: false),
+                        PostalCode = c.String(maxLength: 100, unicode: false),
+                        Country = c.String(maxLength: 15, unicode: false),
+                        Phone = c.String(maxLength: 24, unicode: false),
+                        Fax = c.String(maxLength: 24, unicode: false),
+                        HomePage = c.String(storeType: "ntext"),
                     })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.CustomerDemographics",
-                c => new
-                    {
-                        CustomerTypeID = c.Int(nullable: false, identity: true),
-                        CustomerDesc = c.String(storeType: "ntext"),
-                    })
-                .PrimaryKey(t => t.CustomerTypeID);
+                .PrimaryKey(t => t.SupplierID);
             
             CreateTable(
                 "dbo.Employees",
@@ -160,6 +153,34 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Migrations
                 .PrimaryKey(t => t.RegionID);
             
             CreateTable(
+                "dbo.CustomerDemographics",
+                c => new
+                    {
+                        CustomerTypeID = c.Int(nullable: false, identity: true),
+                        CustomerDesc = c.String(storeType: "ntext"),
+                    })
+                .PrimaryKey(t => t.CustomerTypeID);
+            
+            CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        CustomerID = c.String(nullable: false, maxLength: 5),
+                        CompanyName = c.String(nullable: false, maxLength: 40),
+                        ContactName = c.String(maxLength: 30),
+                        ContactTitle = c.String(maxLength: 30),
+                        Address = c.String(maxLength: 60),
+                        City = c.String(maxLength: 15),
+                        Region = c.String(maxLength: 15),
+                        PostalCode = c.String(maxLength: 10),
+                        Country = c.String(maxLength: 15),
+                        Phone = c.String(maxLength: 24),
+                        Fax = c.String(maxLength: 24),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.Shippers",
                 c => new
                     {
@@ -168,38 +189,6 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Migrations
                         Phone = c.String(maxLength: 25, unicode: false),
                     })
                 .PrimaryKey(t => t.ShipperID);
-            
-            CreateTable(
-                "dbo.Suppliers",
-                c => new
-                    {
-                        SupplierID = c.Int(nullable: false, identity: true),
-                        CompanyName = c.String(nullable: false, maxLength: 40, unicode: false),
-                        ContactName = c.String(maxLength: 30, unicode: false),
-                        ContactTitle = c.String(maxLength: 30, unicode: false),
-                        Address = c.String(maxLength: 60, unicode: false),
-                        City = c.String(maxLength: 15, unicode: false),
-                        Region = c.String(maxLength: 15, unicode: false),
-                        PostalCode = c.String(maxLength: 100, unicode: false),
-                        Country = c.String(maxLength: 15, unicode: false),
-                        Phone = c.String(maxLength: 24, unicode: false),
-                        Fax = c.String(maxLength: 24, unicode: false),
-                        HomePage = c.String(storeType: "ntext"),
-                    })
-                .PrimaryKey(t => t.SupplierID);
-            
-            CreateTable(
-                "dbo.CustomerCustomerDemo",
-                c => new
-                    {
-                        CustomerTypeID = c.Int(nullable: false),
-                        CustomerID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.CustomerTypeID, t.CustomerID })
-                .ForeignKey("dbo.CustomerDemographics", t => t.CustomerTypeID)
-                .ForeignKey("dbo.Customers", t => t.CustomerID)
-                .Index(t => t.CustomerTypeID)
-                .Index(t => t.CustomerID);
             
             CreateTable(
                 "dbo.EmployeeTerritories",
@@ -214,45 +203,58 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Migrations
                 .Index(t => t.EmployeeID)
                 .Index(t => t.TerritoryID);
             
+            CreateTable(
+                "dbo.CustomerCustomerDemo",
+                c => new
+                    {
+                        CustomerTypeID = c.Int(nullable: false),
+                        CustomerID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.CustomerTypeID, t.CustomerID })
+                .ForeignKey("dbo.CustomerDemographics", t => t.CustomerTypeID)
+                .ForeignKey("dbo.Customers", t => t.CustomerID)
+                .Index(t => t.CustomerTypeID)
+                .Index(t => t.CustomerID);
+            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Products", "CategoryID", "dbo.Categories");
-            DropForeignKey("dbo.Products", "SupplierID", "dbo.Suppliers");
-            DropForeignKey("dbo.OrderDetails", "ProductID", "dbo.Products");
-            DropForeignKey("dbo.Orders", "ShipVia", "dbo.Shippers");
-            DropForeignKey("dbo.OrderDetails", "OrderID", "dbo.Orders");
+            DropForeignKey("dbo.Orders", "Shippers_ShipperID", "dbo.Shippers");
+            DropForeignKey("dbo.CustomerCustomerDemo", "CustomerID", "dbo.Customers");
+            DropForeignKey("dbo.CustomerCustomerDemo", "CustomerTypeID", "dbo.CustomerDemographics");
+            DropForeignKey("dbo.Orders", "Customers_ID", "dbo.Customers");
             DropForeignKey("dbo.EmployeeTerritories", "TerritoryID", "dbo.Territories");
             DropForeignKey("dbo.EmployeeTerritories", "EmployeeID", "dbo.Employees");
             DropForeignKey("dbo.Territories", "RegionID", "dbo.Region");
             DropForeignKey("dbo.Orders", "EmployeeID", "dbo.Employees");
             DropForeignKey("dbo.Employees", "ReportsTo", "dbo.Employees");
-            DropForeignKey("dbo.Orders", "CustomerID", "dbo.Customers");
-            DropForeignKey("dbo.CustomerCustomerDemo", "CustomerID", "dbo.Customers");
-            DropForeignKey("dbo.CustomerCustomerDemo", "CustomerTypeID", "dbo.CustomerDemographics");
-            DropIndex("dbo.EmployeeTerritories", new[] { "TerritoryID" });
-            DropIndex("dbo.EmployeeTerritories", new[] { "EmployeeID" });
+            DropForeignKey("dbo.Products", "CategoryID", "dbo.Categories");
+            DropForeignKey("dbo.Products", "SupplierID", "dbo.Suppliers");
+            DropForeignKey("dbo.OrderDetails", "ProductID", "dbo.Products");
+            DropForeignKey("dbo.OrderDetails", "OrderID", "dbo.Orders");
             DropIndex("dbo.CustomerCustomerDemo", new[] { "CustomerID" });
             DropIndex("dbo.CustomerCustomerDemo", new[] { "CustomerTypeID" });
+            DropIndex("dbo.EmployeeTerritories", new[] { "TerritoryID" });
+            DropIndex("dbo.EmployeeTerritories", new[] { "EmployeeID" });
             DropIndex("dbo.Territories", new[] { "RegionID" });
             DropIndex("dbo.Employees", new[] { "ReportsTo" });
-            DropIndex("dbo.Orders", new[] { "ShipVia" });
+            DropIndex("dbo.Orders", new[] { "Shippers_ShipperID" });
+            DropIndex("dbo.Orders", new[] { "Customers_ID" });
             DropIndex("dbo.Orders", new[] { "EmployeeID" });
-            DropIndex("dbo.Orders", new[] { "CustomerID" });
             DropIndex("dbo.OrderDetails", new[] { "ProductID" });
             DropIndex("dbo.OrderDetails", new[] { "OrderID" });
             DropIndex("dbo.Products", new[] { "CategoryID" });
             DropIndex("dbo.Products", new[] { "SupplierID" });
-            DropTable("dbo.EmployeeTerritories");
             DropTable("dbo.CustomerCustomerDemo");
-            DropTable("dbo.Suppliers");
+            DropTable("dbo.EmployeeTerritories");
             DropTable("dbo.Shippers");
+            DropTable("dbo.Customers");
+            DropTable("dbo.CustomerDemographics");
             DropTable("dbo.Region");
             DropTable("dbo.Territories");
             DropTable("dbo.Employees");
-            DropTable("dbo.CustomerDemographics");
-            DropTable("dbo.Customers");
+            DropTable("dbo.Suppliers");
             DropTable("dbo.Orders");
             DropTable("dbo.OrderDetails");
             DropTable("dbo.Products");

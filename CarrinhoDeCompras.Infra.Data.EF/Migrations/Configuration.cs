@@ -9,7 +9,7 @@ namespace CarrinhoDeCompras.Infra.Data.EF.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(CarrinhoDeCompras.Infra.Data.EF.Contexto.CarrinhoDeComprasContext context)
