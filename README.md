@@ -1,5 +1,9 @@
 # Carrinho De Compras
 
+Comandos;
+
+Restore packages nuget command
+
 Comandos para criar o banco de dados 
 
 No Package Manager Console.
