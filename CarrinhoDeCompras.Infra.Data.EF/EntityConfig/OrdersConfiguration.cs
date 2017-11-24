@@ -25,6 +25,8 @@ namespace CarrinhoDeCompras.Infra.Data.EF.EntityConfig
             HasMany(p => p.OrderDetails)
                 .WithRequired(p => p.Orders)
                 .HasForeignKey(p => p.OrderID);
+
+            Ignore(t => t.ValidationResult);
         }
     }
 }

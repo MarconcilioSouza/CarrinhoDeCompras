@@ -1,9 +1,11 @@
-﻿using System;
+﻿using CarrinhoDeCompras.Domain.Interfaces.Validation;
+using CarrinhoDeCompras.Domain.Validation;
+using System;
 using System.Collections.Generic;
 
 namespace CarrinhoDeCompras.Domain.Entidades
 {
-    public partial class Orders
+    public partial class Orders : ISelfValidation
     {
         public Orders()
         {
@@ -32,5 +34,18 @@ namespace CarrinhoDeCompras.Domain.Entidades
         public virtual Employees Employees { get; set; }
         public virtual ICollection<OrderDetails> OrderDetails { get; set; }
         public virtual Shippers Shippers { get; set; }
+
+        public ValidationResult ValidationResult { get; private set; }
+
+        public bool IsValid
+        {
+            get
+            {
+                return true;
+                //var fiscal = new OrderIsValidValidation();
+                //ValidationResult = fiscal.Valid(this);
+                //return ValidationResult.IsValid;
+            }
+        }
     }
 }
