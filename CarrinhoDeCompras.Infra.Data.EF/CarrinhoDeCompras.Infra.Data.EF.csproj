@@ -59,9 +59,9 @@
     <Compile Include="EntityConfig\ShippersConfiguration.cs" />
     <Compile Include="EntityConfig\SuppliersConfiguration.cs" />
     <Compile Include="EntityConfig\TerritoriesConfiguration.cs" />
-    <Compile Include="Migrations\201711241853468_CarrinhoDeCompras_V1.cs" />
-    <Compile Include="Migrations\201711241853468_CarrinhoDeCompras_V1.Designer.cs">
-      <DependentUpon>201711241853468_CarrinhoDeCompras_V1.cs</DependentUpon>
+    <Compile Include="Migrations\201711241106392_CarrinhoDeCompras_V1.cs" />
+    <Compile Include="Migrations\201711241106392_CarrinhoDeCompras_V1.Designer.cs">
+      <DependentUpon>201711241106392_CarrinhoDeCompras_V1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,8 +89,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711241853468_CarrinhoDeCompras_V1.resx">
-      <DependentUpon>201711241853468_CarrinhoDeCompras_V1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711241106392_CarrinhoDeCompras_V1.resx">
+      <DependentUpon>201711241106392_CarrinhoDeCompras_V1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
